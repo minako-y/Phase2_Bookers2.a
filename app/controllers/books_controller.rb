@@ -9,7 +9,7 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all
+    @books = Book.order(likes_count: :desc)
     @book = Book.new
   end
 
