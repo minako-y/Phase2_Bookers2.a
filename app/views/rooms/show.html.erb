@@ -3,9 +3,9 @@
     <div class="col-5 mr-auto">
 
       <% @entries.each do |e| %>
-      <% if e.user.id != current_user.id %>
-        <h2><%= e.user.name %>さんとのチャット</h2>
-      <% end %>
+        <% if e.user.id != current_user.id %>
+          <h2><strong><%= e.user.name %>さんとのチャット</strong></h2>
+        <% end %>
       <% end %>
 
       <div class="chat">

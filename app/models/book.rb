@@ -10,6 +10,8 @@ class Book < ApplicationRecord
 	validates :title, presence: true
 	validates :body, presence: true, length: {maximum: 200}
 
+	is_impressionable counter_cache: true
+
 
   def self.looks(method, words)
     if method == "perfect"
